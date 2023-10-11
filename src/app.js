@@ -1,12 +1,12 @@
 import express from "express";
-import productsRouter from "./routers/products.router";
-import cartsRouter from "./routers/carts.router";
+import productsRouter from "./routers/products.router.js";
+import cartsRouter from "./routers/carts.router.js";
 
 const app = express();
 const port = 8080;
-// CLASE DE EXPRESS AVANZADO QUEDA UNA HORA Y DESPUES FALTA ROUTER TAMBIEN
+
 app.use(express.json());
-app.use(express.urlencoded({ extended: ture }));
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", productsRouter, cartsRouter);
 
