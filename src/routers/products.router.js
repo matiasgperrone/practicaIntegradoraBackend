@@ -6,7 +6,13 @@ const router = Router();
 const product = new ProductManager();
 
 router.get("/products", async (req, res) => {
-  res.send(await product.getProducts());
+  const products = await product.getProducts();
+  const limit = req.query.limit;
+  if (limit) {
+    res.send(products.slice(0, limit));
+  } else {
+    res.send(products);
+  }
 });
 
 router.get("/products/:id", async (req, res) => {

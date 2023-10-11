@@ -21,6 +21,27 @@ class ProductManager {
   };
 
   addProducts = async (product) => {
+    const {
+      title,
+      description,
+      price,
+      thumbnail,
+      code,
+      stock,
+      status,
+      category,
+    } = product;
+    if (
+      !title ||
+      !description ||
+      !price ||
+      !code ||
+      !stock ||
+      !status ||
+      !category
+    ) {
+      return "Todos los campos son obligatorios";
+    }
     let productsBefore = await this.readProducts();
     product.id = uuidv4();
     let productAll = [...productsBefore, product];
