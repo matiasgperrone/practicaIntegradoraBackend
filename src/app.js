@@ -1,10 +1,8 @@
 import express from "express";
 import handlebars from "express-handlebars";
 import path from "path";
-
 import indexRouter from "./routers/index.router.js";
 import { __dirname } from "./utils.js";
-
 import productsRouter from "./routers/products.router.js";
 import cartsRouter from "./routers/carts.router.js";
 

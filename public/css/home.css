@@ -1,9 +1,0 @@
-.productList {
-  display: flex;
-  flex-direction: column;
-  text-decoration: double;
-}
-.unali {
-  text-align: end;
-  color: red;
-}
