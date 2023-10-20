@@ -31,15 +31,8 @@ class ProductManager {
       status,
       category,
     } = product;
-    if (
-      !title ||
-      !description ||
-      !price ||
-      !code ||
-      !stock ||
-      !status ||
-      !category
-    ) {
+    console.log("Valores extraídos:", product);
+    if (!title || !description || !price || !code || !stock || !category) {
       return "Todos los campos son obligatorios";
     }
     let productsBefore = await this.readProducts();

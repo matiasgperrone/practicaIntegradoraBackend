@@ -1,24 +1,47 @@
-<div>
-  <h1>Crear productos</h1>
-  <form id="form-products">
-    <input id="input-title" type="text" required placeholder="Title" />
-    <input
-      id="input-description"
-      type="text"
-      required
-      placeholder="Description"
-    />
-    <input id="input-price" type="number" required placeholder="Price" />
-    <input id="input-code" type="text" required placeholder="Code" />
-    <input id="input-stock" type="text" required placeholder="Stock" />
-    <input id="input-status" type="text" required placeholder="Status" />
-    <input id="input-category" type="text" required placeholder="Category" />
-    <input type="submit" value="Crear" />
-  </form>
-</div>
+<main>
 
-<div id="productsRealTime"></div>
+  <div>
+    <h3>Create products</h3>
+    <form id="form-create-products" action="/api/products" method="POST">
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <input id="input-title" type="text" required placeholder="Title" />
+      <input
+        id="input-description"
+        type="text"
+        required
+        placeholder="Description"
+      />
+      <input id="input-price" type="number" required placeholder="Price" />
+      <input id="input-code" type="text" required placeholder="Code" />
+      <input id="input-stock" type="number" required placeholder="Stock" />
+
+      <input id="input-category" type="text" required placeholder="Category" />
+
+      <input type="submit" id="addButton" value="Create product" />
+    </form>
+  </div>
+
+  <div>
+    <h3>Products in real time</h3>
+    <div id="productsRealTime"></div>
+  </div>
+
+  <div>
+    <h3>Delete a product</h3>
+    <form action="/api/products/:id" id="form-delete-products" method="DELETE">
+
+      <input
+        id="input-id-delete"
+        type="text"
+        required
+        placeholder="Product ID"
+      />
+
+      <input id="delete-buttom" type="submit" value="Delete product" />
+
+    </form>
+  </div>
+</main>
+
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/index.js"></script>

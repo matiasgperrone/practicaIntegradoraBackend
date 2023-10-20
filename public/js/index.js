@@ -1,63 +1,55 @@
 (function () {
   const socket = io();
-  const formProducts = document.getElementById("form-products");
-  const inputTitle = document.getElementById("input-title");
-  const inputDescription = document.getElementById("input-description");
-  const inputPrice = document.getElementById("input-price");
-  const inputCode = document.getElementById("input-code");
-  const inputStock = document.getElementById("input-stock");
-  const inputCategory = document.getElementById("input-category");
-  const productsRealTime = document.getElementById("productsRealTime")
 
-  formProducts.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const title = inputTitle.value;
-    const description = inputDescription.value;
-    const price = inputPrice.value;
-    const code = inputCode.value;
-    const stock = inputStock.value;
-    const category = inputCategory.value;
-    socket.emit("new-product", {
-      title,
-      description,
-      price,
-      code,
-      stock,
-      category,
+  document
+    .getElementById("form-create-products")
+    .addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const newProduct = {
+        title: document.getElementById("input-title").value,
+        description: document.getElementById("input-description").value,
+        price: document.getElementById("input-price").value,
+        code: document.getElementById("input-code").value,
+        stock: document.getElementById("input-stock").value,
+        category: document.getElementById("input-category").value,
+      };
+      console.log(newProduct.title);
+      socket.emit("addProduct", newProduct);
+      document.getElementById("input-title").value = "";
+      document.getElementById("input-description").value = "";
+      document.getElementById("input-price").value = "";
+      document.getElementById("input-code").value = "";
+      document.getElementById("input-stock").value = "";
+      document.getElementById("input-category").value = "";
+      document.getElementById("input-title").focus();
     });
-    console.log("Nuevo producto creado", {
-      title,
-      description,
-      price,
-      code,
-      stock,
-      category,
+
+  socket.on("listProducts", (products) => {
+    const divProducts = document.getElementById("productsRealTime");
+    divProducts.innerText = "";
+    products.forEach((p) => {
+      const productElement = document.createElement("div");
+      productElement.innerHTML = `
+          <h3>${p.title}</h3>
+          <p>Description: ${p.description}</p>
+          <p>Category: ${p.category}</p>
+          <p>Price: ${p.price}</p>
+          <p>Stock: ${p.stock}</p>
+          <p id="idProd">Id:${p.id}</p>
+          `;
+      divProducts.appendChild(productElement);
     });
-    inputTitle.value = "";
-    inputDescription.value = "";
-    inputPrice.value = "";
-    inputTinputCodeitle.value = "";
-    inputStock.value = "";
-    inputCategory.value = "";
-    inputTitle.focus();
   });
 
-  function updateProducts (products){
-    
-  }
-
-  function updateLogMessages(messages) {
-    logMessages.innerText = '';
-    messages.forEach((msg) => {
-      const p = document.createElement('p');
-      p.innerText = `${msg.username}: ${msg.text}`;
-      logMessages.appendChild(p);
+  document
+    .getElementById("form-delete-products")
+    .addEventListener("submit", (event) => {
+      event.preventDefault();
+      const idToDelete = document.getElementById("input-id-delete").value;
+      console.log(idToDelete);
+      socket.emit("deleteProduct", idToDelete);
+      document.getElementById("input-id-delete").value = "";
+      document.getElementById("input-id-delete").focus();
     });
-  }
-  // form-message
-  const formMessage = document.getElementById("form-message");
-  // input-message
-  const inputMessage = document.getElementById("input-message");
-  // log-messages
-  const logMessages = document.getElementById("log-messages");
-});
+})();
