@@ -1,1 +1,139 @@
-[{"title":"Zapatillas Nike Running","description":"Nike para correr","price":150000,"code":"1","stock":10,"status":true,"category":"Calzado","id":"d623f3a1-ba99-4bbe-9f90-e434b0b4011f"},{"title":"Zapatillas Adidas Cf","description":"Adidas para Crossfit","price":120000,"code":"2","stock":14,"status":true,"category":"Calzado","id":"75a5d48e-e70a-4bb6-aba8-1e2e16e81eee"},{"title":"Ojotas amarillas","description":"Ojotas de playa","price":43000,"code":"3","stock":3,"status":true,"category":"Calzado","id":"c80a23a1-54a8-4d48-804c-76019302b2fe"},{"title":"Crocs Azules","description":"Crocs color azul de playa","price":52000,"code":"4","stock":42,"status":true,"category":"Calzado","id":"341d5a02-f15f-4234-8865-063ff0b6a8bb"},{"title":"Remera Nike I","description":"Remera Nike para running","price":32000,"code":"5","stock":12,"status":true,"category":"Remeras","id":"ea9fc8b6-c45b-46da-92fe-73ea515ecebc"},{"title":"Remera Nike II","description":"Remera Nike para training","price":28000,"code":"6","stock":2,"status":true,"category":"Remeras","id":"372acdbc-8a36-4252-805a-224965f561ba"},{"title":"Remera Adidas Run","description":"Remera Adidas para running","price":18000,"code":"7","stock":23,"status":true,"category":"Remeras","id":"23db7981-3670-4226-a29a-9af3ee024dfe"},{"title":"Remera Reebok Live","description":"Remera urbana Reebok","price":13000,"code":"8","stock":4,"status":true,"category":"Remeras","id":"72372e78-ffc4-4f9e-ba26-a14402cada54"},{"title":"Remera Vans OTW","description":"Remera Vans urbana","price":15000,"code":"9","stock":5,"status":true,"category":"Remeras","id":"80e1e739-6e02-48d1-a895-8cc0f45b0485"},{"title":"Pantalon Levis","description":"Pantalon de Jean Levis","price":84000,"code":"10","stock":5,"status":true,"category":"Pantalones","id":"432e1c42-66aa-498f-b2f6-c92a71b15b2a"},{"title":"Pantalon Bokura bolsillos","description":"Pantalon cargo marca Bokura","price":43000,"code":"11","stock":7,"status":true,"category":"Pantalones","id":"142263af-0722-47ce-a017-c4ac864b7682"},{"title":"Zapatillas","description":"Azules","price":"4","code":"2","stock":"5","category":"yanta","id":"d13bdb42-442a-41d5-8e61-d2125d0da372"},{"title":"Zapatillas","description":"Azules","price":"4","code":"2","stock":"5","category":"yanta","id":"dd1b3efc-3cd8-49fd-9208-910c53989be8"},{"title":"Zapatillas","description":"Azules","price":"3","code":"3","stock":"1","category":"yanta","id":"c46e0f4e-ebc4-46d4-8d40-75d2553dd2bb"}]
+[
+  {
+    "title": "Zapatillas Nike Running",
+    "description": "Nike para correr",
+    "price": 150000,
+    "code": "1",
+    "stock": 10,
+    "status": true,
+    "category": "Calzado",
+    "id": "d623f3a1-ba99-4bbe-9f90-e434b0b4011f"
+  },
+  {
+    "title": "Zapatillas Adidas Cf",
+    "description": "Adidas para Crossfit",
+    "price": 120000,
+    "code": "2",
+    "stock": 14,
+    "status": true,
+    "category": "Calzado",
+    "id": "75a5d48e-e70a-4bb6-aba8-1e2e16e81eee"
+  },
+  {
+    "title": "Ojotas amarillas",
+    "description": "Ojotas de playa",
+    "price": 43000,
+    "code": "3",
+    "stock": 3,
+    "status": true,
+    "category": "Calzado",
+    "id": "c80a23a1-54a8-4d48-804c-76019302b2fe"
+  },
+  {
+    "title": "Crocs Azules",
+    "description": "Crocs color azul de playa",
+    "price": 52000,
+    "code": "4",
+    "stock": 42,
+    "status": true,
+    "category": "Calzado",
+    "id": "341d5a02-f15f-4234-8865-063ff0b6a8bb"
+  },
+  {
+    "title": "Remera Nike I",
+    "description": "Remera Nike para running",
+    "price": 32000,
+    "code": "5",
+    "stock": 12,
+    "status": true,
+    "category": "Remeras",
+    "id": "ea9fc8b6-c45b-46da-92fe-73ea515ecebc"
+  },
+  {
+    "title": "Remera Nike II",
+    "description": "Remera Nike para training",
+    "price": 28000,
+    "code": "6",
+    "stock": 2,
+    "status": true,
+    "category": "Remeras",
+    "id": "372acdbc-8a36-4252-805a-224965f561ba"
+  },
+  {
+    "title": "Remera Adidas Run",
+    "description": "Remera Adidas para running",
+    "price": 18000,
+    "code": "7",
+    "stock": 23,
+    "status": true,
+    "category": "Remeras",
+    "id": "23db7981-3670-4226-a29a-9af3ee024dfe"
+  },
+  {
+    "title": "Remera Reebok Live",
+    "description": "Remera urbana Reebok",
+    "price": 13000,
+    "code": "8",
+    "stock": 4,
+    "status": true,
+    "category": "Remeras",
+    "id": "72372e78-ffc4-4f9e-ba26-a14402cada54"
+  },
+  {
+    "title": "Remera Vans OTW",
+    "description": "Remera Vans urbana",
+    "price": 15000,
+    "code": "9",
+    "stock": 5,
+    "status": true,
+    "category": "Remeras",
+    "id": "80e1e739-6e02-48d1-a895-8cc0f45b0485"
+  },
+  {
+    "title": "Pantalon Levis",
+    "description": "Pantalon de Jean Levis",
+    "price": 84000,
+    "code": "10",
+    "stock": 5,
+    "status": true,
+    "category": "Pantalones",
+    "id": "432e1c42-66aa-498f-b2f6-c92a71b15b2a"
+  },
+  {
+    "title": "Pantalon Bokura bolsillos",
+    "description": "Pantalon cargo marca Bokura",
+    "price": 43000,
+    "code": "11",
+    "stock": 7,
+    "status": true,
+    "category": "Pantalones",
+    "id": "142263af-0722-47ce-a017-c4ac864b7682"
+  },
+  {
+    "title": "Zapatillas",
+    "description": "Azules",
+    "price": "4",
+    "code": "2",
+    "stock": "5",
+    "category": "yanta",
+    "id": "d13bdb42-442a-41d5-8e61-d2125d0da372"
+  },
+  {
+    "title": "Zapatillas",
+    "description": "Azules",
+    "price": "4",
+    "code": "2",
+    "stock": "5",
+    "category": "yanta",
+    "id": "dd1b3efc-3cd8-49fd-9208-910c53989be8"
+  },
+  {
+    "title": "Zapatillas",
+    "description": "Azules",
+    "price": "3",
+    "code": "3",
+    "stock": "1",
+    "category": "yanta",
+    "id": "c46e0f4e-ebc4-46d4-8d40-75d2553dd2bb"
+  }
+]

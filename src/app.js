@@ -4,9 +4,12 @@ import path from "path";
 import indexRouter from "./routers/index.router.js";
 import { __dirname } from "./utils.js";
 import productsRouter from "./routers/products.router.js";
+import productsAPIRouter from "./routers/api/products.router.js";
 import cartsRouter from "./routers/carts.router.js";
 
 const app = express();
+
+app.use("/api", productsAPIRouter);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

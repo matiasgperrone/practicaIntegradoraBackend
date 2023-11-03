@@ -1,4 +1,5 @@
 import productModel from "../models/product.model.js";
+import { Exception } from "../utils.js";
 
 export default class ProductManagerMDB {
   static get(query = {}) {
@@ -12,7 +13,7 @@ export default class ProductManagerMDB {
   static async getProductById(pid) {
     const product = await productModel.findById(pid);
     if (!product) {
-      throw new Error("El producto no existe 😢");
+      throw new Exception("El producto no existe 😢", 404);
     }
     return product;
   }
@@ -26,7 +27,7 @@ export default class ProductManagerMDB {
   static async updateProductById(pid, data) {
     const product = await productModel.findById(pid);
     if (!product) {
-      throw new Error("El producto no existe 😢");
+      throw new Exception("El producto no existe 😢", 404);
     }
     const criteria = { _id: pid };
     const operation = { $set: data };
@@ -37,7 +38,7 @@ export default class ProductManagerMDB {
   static async deleteProductById(pid) {
     const product = await productModel.findById(pid);
     if (!product) {
-      throw new Error("El producto no existe 😢");
+      throw new Exception("El producto no existe 😢", 404);
     }
     const criteria = { _id: pid };
     await productModel.deleteOne(criteria);
